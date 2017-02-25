@@ -1,0 +1,222 @@
+sudo apt-get install lua-5.3
+------------------------------------
+lua -i
+
+lua test.lua
+
+chmod u+x test.lua; ./test.lua 
+------------------------------------
+mark off
+    --line mark
+    --[[ block mark --]]
+------------------------------------
+variable name
+    [a-zA-Z_][a-zA-Z0-9_]*
+------------------------------------
+variable is global by default
+    print(b)
+    b = 10
+    print(b)
+------------------------------------
+data type
+    nil
+        nil
+    boolean
+        true, flase
+    number
+        1.2333334
+    string
+        'hello', "hello"
+    function
+        c language function, or lua language function
+    userdata
+        c data struct which is stored in variable
+    thread
+        user-thread
+    table
+------------------------------------
+type
+    type(variable)
+------------------------------------
+nil
+    no-assigned variable
+    for global variable/table, assigned nil which equal to remove variable
+-------------
+boolean
+    true
+    false
+
+    lua regard nil as false 
+-------------
+number
+    lua has only one number type(double)
+-------------
+string
+    'dfsdf'
+
+    "sdfsdf"
+
+    [[ sdfdf 
+      dfsdfs]]
+
+    strcat
+        print(val1 .. var2)
+    
+    strlen
+        #val1
+-------------
+table
+    tbll = { }
+    local tbl = {"apple", "pear", "orange", "grape"}
+-------------
+function
+    function factorial1(n)
+        if n == 0 then
+        else
+            return n * factorial1(n - 1)
+        end
+    end
+
+    print(factorial1(5))
+    factorial2 = factorial1
+    print(factorial2(5))
+
+    anonymous function
+-------------
+thread
+    coroutine
+------------------------------------
+lua variable
+    global variable
+    local variable (local)
+    table domain variable
+-------------
+variable is global by default, except using local 
+-------------
+variable assign
+    var1, val2, ... = res1, res2, ...
+
+    leftValNum > rightNum, using nil to assign 
+    leftValNum < rightNum, ingore some variable in right 
+-------------
+table index
+    t[i]
+    t.i
+    gettable_event(t, i)
+    -------------
+    > site['hello'] = 'world';
+    > print(site.hello)
+    world
+    > print(site['hello'])
+    world
+    > print(site["hello"])
+    world
+------------------------------------
+lua loop
+    -------------
+    while (condition)
+    do
+        statements
+    end
+    -------------
+
+    for var = exp1, exp2, exp3
+    do 
+        statements
+    end 
+
+    for i,v in ipairs(a) 
+    do 
+        print(v) 
+    end 
+    -------------
+
+    repeat
+        statements
+    until(condition)
+
+    -------------
+    break
+------------------------------------
+if 
+    -------------
+    if (condition)
+    then
+        statements
+    end
+    -------------
+    
+    if (condition)
+    then 
+        statements
+    else 
+        statements
+    end
+    -------------
+
+    if (condition)
+    then 
+        statements
+    elseif
+        statements
+    else
+        statements
+    end
+    -------------
+------------------------------------
+function
+    -------------
+    optional_function_scope function function_name( argument1, argument2, argument3..., argumentn)
+        function_body
+        return result_params_comma_separated
+    end
+    
+    function max(num1, num2)
+       if (num1 > num2) then
+          result = num1;
+       else
+          result = num2;
+       end
+       
+        return result; 
+    end
+    -------------
+    
+    function average(...)
+       result = 0
+       local arg={...}
+       for i,v in ipairs(arg) do
+          result = result + v
+       end
+       print("总共传入 " .. #arg .. " 个数")
+       return result/#arg
+    end
+
+    print("平均值为",average(10,5,3,4,5,6))
+    ------------------------------------
+------------------------------------
+lua operator
+    -------------
+    math-compute-operator
+        + 
+        - 
+        * 
+        / 
+        % 
+        ^ 
+        -
+    math-relation-operator
+        ==
+        ~=
+        >
+        >=
+        <
+        <=
+    math-logical-operator
+        and 
+        or
+        not 
+    other-operator
+        #stringVar
+        stringVar1 ... stringVar2
+
