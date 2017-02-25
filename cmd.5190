@@ -286,5 +286,12 @@ lua table
         remove
 ------------------------------------
 lua module
-
+    -------------
+    module.lua 
+    -------------
+    require(""module")
+    print(module.constant)
+    
+    -------------
+    lua-c packet
 
