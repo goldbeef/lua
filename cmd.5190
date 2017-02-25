@@ -219,4 +219,72 @@ lua operator
     other-operator
         #stringVar
         stringVar1 ... stringVar2
+------------------------------------
+lua string
+    -------------
+    type 
+        'hello'
+        "hello"
+        [[helo]]
+    -------------
+    string.method
+        upper
+        lower
+        gsub
+        strfind
+        reverse
+        format
+        char
+        byte
+        len
+        rep
+        ...
+------------------------------------
+lua array
+    -------------
+    array = {
+        "Lua", "Tutorial"}
+    }
+
+    index start from 0, by default
+
+    -------------
+    multi-array
+------------------------------------
+lua iterator
+    -------------
+    for k, v in pairs(t) do
+        print(k, v)
+    end
+
+    two kind iterator:
+        no-status iterator;
+        with-status iterator;
+
+    ------------
+------------------------------------
+lua table
+    -------------
+    -- 初始化表
+    mytable = {
+    }
+
+    -- 指定值
+    mytable[1]= "Lua"
+    
+    -- 移除引用
+    mytable = nil
+    -- lua 垃圾回收会释放内存""
+    }
+    -------------
+    
+    table-method
+        concat
+        insert
+        maxn
+        sort
+        remove
+------------------------------------
+lua module
+
 
