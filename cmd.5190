@@ -294,4 +294,58 @@ lua module
     
     -------------
     lua-c packet
+------------------------------------
+lua metatable
+    -------------
+    setmetatable(table, metatable)
+    getmetatable(table)
+    -------------
+    metamethod
+        __index
+        __newindex
+        __add
+        __sub
+        ....
 
+        __call
+        __tostring
+------------------------------------
+lua coroutine
+    -------------
+    coroutine.create
+    coroutine.resume
+    coroutine.yield
+    coroutine.status
+    coroutine.wrap
+    coroutine.running
+------------------------------------
+lua file-io
+    -------------
+    simple mode
+        io.open
+        io.input
+        io.output
+        io.read
+        io.write
+        io.close
+        io.type
+        io.flush
+        io.lines
+    -------------
+    completet mode 
+        io.open
+        file:read
+        file:write
+        file:close
+        file:seek
+        file:flush 
+        io.lines
+------------------------------------
+lua collectgarbage
+------------------------------------
+lua OOD&OOP
+------------------------------------
+luaSQL
+------------------------------------
+LUA HOME
+    http://www.lua.org/
