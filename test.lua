@@ -86,6 +86,22 @@ matrix:
 	无界数组即可
 --]]
 
+--[[
+--
+队列/双端队列
+	function listNew(){
+		return {
+			first = 0,
+			last = -1;
+		}
+	}
+
+	pushFirst(list, value);
+	pushLast(list, value);
+
+	popFirst(list, value);
+	popLast(list, value);
+--]]
 
 
 --
